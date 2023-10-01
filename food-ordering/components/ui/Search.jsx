@@ -2,6 +2,7 @@ import React from 'react'
 import OutSideClickHandler from "react-outside-click-handler"
 import Title from "../ui/Title";
 import {GiCancel} from "react-icons/gi"
+import Image from 'next/image';
 
 const Search = ({setIsSearchModal}) => {
   return (
@@ -10,15 +11,43 @@ const Search = ({setIsSearchModal}) => {
     after:absolute after:top-0 after:left-0 after:opacity-60 grid place-content-center">
         <OutSideClickHandler onOutsideClick={()=>setIsSearchModal(false)}>
           <div className='w-full h-full grid place-content-center relative'>
-          <div className='relative z-50 w-[600px] h-[600px bg-white border-2 p-5]'> 
+          <div className='relative z-50 w-[600px] h-[600px] bg-white border-2 p-5'> 
             <Title addClass="text-[40px] text-center">Search</Title>
             <input
             type='text'
             placeholder='Search...'
             className='border w-full my-10'/>
-            <ul>
-
-            </ul>
+            <div>
+              <ul>
+                <li className='flex items-center justify-between p-2 hover:bg-primary transition-all'>
+                  <div className='relative flex'>
+                    <Image src="/images/f1.png" alt="" width={48} height={48}/>
+                  </div>
+                  <span className='font-bold'>Good Pizza</span>
+                  <span className='font-bold'>$10</span>
+                </li>
+              </ul>
+              <ul>
+                <li className='flex items-center justify-between p-2 hover:bg-primary transition-all'>
+                  <div className='relative flex'>
+                    <Image src="/images/f1.png" alt="" width={48} height={48}/>
+                  </div>
+                  <span className='font-bold'>Good Pizza</span>
+                  <span className='font-bold'>$10</span>
+                </li>
+              </ul>
+              <ul>
+                <li className='flex items-center justify-between p-2 hover:bg-primary transition-all'>
+                  <div className='relative flex'>
+                    <Image src="/images/f1.png" alt="" width={48} height={48}/>
+                  </div>
+                  <span className='font-bold'>Good Pizza</span>
+                  <span className='font-bold'>$10</span>
+                </li>
+              </ul>
+              
+            </div>
+            
             <button className='absolute top-4 right-4'
             onClick={()=>setIsSearchModal(false)}>
                 <GiCancel size={25} className="transition-all"/>
