@@ -12,6 +12,7 @@ export default function Index() {
         <title>Create Next App</title>
       </Head>
       <Header/>
+      <Home/>
       
     </div>
   );

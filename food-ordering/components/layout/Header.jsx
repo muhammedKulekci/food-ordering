@@ -2,14 +2,15 @@
 import { useState } from "react";
 import Logo from "../ui/Logo";
 import {FaUserAlt , FaShoppingCart , FaSearch} from "react-icons/fa"
-import OutSideClickHandler from "react-outside-click-handler"
-import Title from "../ui/Title";
 import Search from "../ui/Search";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [isSearchModal,setIsSearchModal] = useState(false)
+
+  const router = useRouter();
   return (
-    <div className="h-[5.5rem] bg-secondary">
+    <div className={`h-[5.5rem] ${router.asPath === "/" ? "bg-transparent": "bg-secondary"} z-50 relative`}>
         <div className="container mx-auto justify-between text-white items-center h-full flex">
         <div><Logo/></div>
         <nav>
