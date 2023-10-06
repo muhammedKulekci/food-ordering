@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Title from "./Title";
+import Title from "./ui/Title";
 
 const About = () => {
   return (
