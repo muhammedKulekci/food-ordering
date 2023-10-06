@@ -6,16 +6,16 @@ const About = () => {
   return (
     <div className="bg-secondary text-white py-20">
       <div className="container mx-auto justify-center  flex items-center gap-20">
-        <div>
-          <div className="relative w-[445px] h-[600px] ">
+        <div className="flex justify-center">
+          <div className="relative sm:w-[445px] sm:h-[600px] flex justify-center w-[300px] h-[450px] ">
             <Image alt="" src="/images/about-img.png" fill className="" />
           </div>
         </div>
         <div>
-          <h4>
+          <h4 className="md:w-1/2">
             <Title addClass="text-[40px]">We Are Feane</Title>
           </h4>
-          <p className="my-5 text-[14px]">
+          <p className="my-5 text-[14px] flex  flex-col items-center">
             There are many variations of passages of Lorem Ipsum available, but
             the majority have suffered alteration in some form, by injected
             humour, or randomised words which don't look even slightly
