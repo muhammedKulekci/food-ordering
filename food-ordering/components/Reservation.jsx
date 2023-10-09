@@ -4,7 +4,7 @@ import Input from "./form/Input";
 import { useFormik } from "formik";
 
 const Reservation = () => {
-  const formik = useFormik({
+  const {values,handleSubmit,handleChange} = useFormik({
     initialValues: {
       fullName: "",
       phoneNumber: "",
@@ -23,35 +23,35 @@ const Reservation = () => {
       name: "fullName",
       type: "text",
       placeholder: "Your Full Name",
-      values:formik.values.fullName,
+      values:values.fullName,
     },
     {
       id: 2,
       name: "phoneNumber",
       type: "number",
       placeholder: "Your Phone Name",
-      values:formik.values.phoneNumber,
+      values:values.phoneNumber,
     },
     {
       id: 3,
       name: "persons",
       type: "number",
       placeholder: "How Many Persons?",
-      values:formik.values.persons,
+      values:values.persons,
     },
     {
       id: 4,
       name: "email",
       type: "email",
       placeholder: "Your Email Adress",
-      values:formik.values.email,
+      values:values.email,
     },
     {
       id: 5,
       name: "date",
       type: "datetime-local",
       placeholder: "",
-      values:formik.values.date,
+      values:values.date,
     },
   ];
   return (
@@ -61,9 +61,9 @@ const Reservation = () => {
           <Title addClass="text-[40px]">Book A Tabel</Title>
         </div>
         <div className="flex justify-between gap-x-10">
-          <form className="flex flex-col gap-y-3 w-full" onSubmit={formik.handleSubmit}>
+          <form className="flex flex-col gap-y-3 w-full" onSubmit={handleSubmit}>
             {inputs.map((input) => (
-              <Input key={input.id} {...input} onChange={formik.handleChange} />
+              <Input key={input.id} {...input} onChange={handleChange} />
             ))}
             <button className="btn-primary w-36">Book Now</button>
           </form>

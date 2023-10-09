@@ -4,6 +4,7 @@ import Campaigns from "@/components/Campaigns";
 import Carousel from "@/components/Carousel";
 import React from "react";
 import Reservation from "@/components/Reservation";
+import Customers from "@/components/customers/Customers";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <MenuWrapper/>
       <About/>
       <Reservation/>
+      <Customers/>
     </div>
   );
 };
